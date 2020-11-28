@@ -1,0 +1,35 @@
+<ul ngbNav #nav="ngbNav" [activeId]="2" class="nav-tabs justify-content-center">
+    <li [ngbNavItem]="1">
+      <a ngbNavLink routerLink="/"><b>O</b></a>
+    </li>
+    <li [ngbNavItem]="2">
+      <a ngbNavLink routerLink="/shopping-cart">Shopping Cart</a>
+    </li>
+    <li [ngbNavItem]="3">
+        <a ngbNavLink routerLink="/login">Login</a>
+      </li>
+    <li ngbDropdown class="nav-item">
+      <a href (click)="false" class="nav-link" ngbDropdownToggle>Dropdown</a>
+      <div ngbDropdownMenu>
+        <button ngbDropdownItem>My Orders</button>
+        <button ngbDropdownItem>Manage Orders</button>
+        <button ngbDropdownItem>Manage Products</button>
+        <div class="dropdown-divider"></div>
+        <button ngbDropdownItem>Log Out</button>
+      </div>
+    </li>
+  
+    <li ngbNavItem [disabled]="true" class="ml-auto">
+      <a ngbNavLink>Disabled</a>
+      <ng-template ngbNavContent>
+        <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi.
+          Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio.
+          Duis pharetra et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices et. Sed diam urna,
+          egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus nisl enim, nec
+          tristique ipsum euismod facilisis. Morbi ut bibendum est, eu tincidunt odio. Orci varius natoque penatibus et
+          magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem aliquet ultricies in eget
+          neque. Phasellus nec tortor vel tellus pulvinar feugiat.</p>
+      </ng-template>
+    </li>
+  </ul>
+  <div [ngbNavOutlet]="nav" class="mt-2"></div>

@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { LoginComponent } from './login/login.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 const routes: Routes = [
-  { path: 'shopping-cart', component: ShoppingCartComponent }
+  { path: 'shopping-cart', component: ShoppingCartComponent },
+  { path: 'login', component: LoginComponent}
 ];
 
 
@@ -17,7 +19,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     ShoppingCartComponent,
-    LoginComponent
+    LoginComponent,
+    NavbarComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
