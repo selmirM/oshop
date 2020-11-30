@@ -3,8 +3,19 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyBkHY9DLKTINddzkuek8qAOkI2sHv2S20Q',
+    authDomain: 'oshop-d12b2.firebaseapp.com',
+    databaseURL: 'https://oshop-d12b2.firebaseio.com',
+    projectId: 'oshop-d12b2',
+    storageBucket: 'oshop-d12b2.appspot.com',
+    messagingSenderId: '1011900769227',
+    appId: '1:1011900769227:web:f5a89a311eb9e2a6cf4c4e',
+    measurementId: 'G-DEQS2NDVK6'
+  }
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file

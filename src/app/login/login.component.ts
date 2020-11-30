@@ -1,20 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import firebase from 'firebase';
+import { Component, OnInit, Injectable } from '@angular/core';
+import { AuthService } from '../auth.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
+  constructor(private auth: AuthService) {}
 
-  constructor(private afAuth: AngularFireAuthModule) { 
-  }
-
-  ngOnInit(): void {
-  }
-
-  login() {
-
+  login(): void {
+    this.auth.login();
   }
 }
