@@ -1,0 +1,51 @@
+<p>
+    <input 
+    #query
+    (keyup)="filter(query.value)" type="text" class="form-control" placeholder="Search...">
+</p>
+<p>
+    <a routerLink="/admin/products/new" class="btn btn-primary">New Product</a>
+</p>
+<!-- <data-table
+[items]="items"
+[itemCount]="itemCount"
+(reload)="reloadItems($event)"
+>
+<data-table-column
+[property]="'title'"
+[header]="'Title'"
+[sortable]="true"
+[resizable]="true"
+>
+</data-table-column>
+<data-table-column
+[property]="'price'"
+[header]="'Pitle'"
+[sortable]="true"
+[resizable]="true"
+>
+<ng-template #dataTableCell let-item="product">{{ product.price | currency:'USD':true }}</ng-template>
+</data-table-column>
+
+<data-table-column
+[property]="'product.key'"
+>
+<ng-template #dataTableCell let-item="product"><a [routerLink]="['/admin/products/', product.key]">Edit</a></ng-template>
+</data-table-column>
+
+</data-table> -->
+
+<table class="table">
+    <tr>
+        <th>Title</th>
+        <th>Price</th>
+        <th></th>
+    </tr>
+    <tbody>
+        <tr *ngFor="let product of filteredProducts">
+            <td>{{product.data.title}}</td>
+            <td>{{product.data.price}}</td>
+            <td><a [routerLink]="['/admin/products/', product.key]">Edit</a></td>
+        </tr>
+    </tbody>
+</table>
